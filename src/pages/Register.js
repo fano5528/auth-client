@@ -24,7 +24,6 @@ export default function Register() {
             .then(data => console.log(data))
     }
 
-
     return (
         <div>
             <h1 className="text-center mt-24 font-bold text-3xl">Register</h1>
