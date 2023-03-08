@@ -22,7 +22,10 @@ export default function Register() {
             })
             .then(data => data.json())
             .then(data => {
-                console.log(data)})
+                if(data.auth) {
+                    window.location.href = '/dashboard'
+                }
+            })
     }
 
     return (
