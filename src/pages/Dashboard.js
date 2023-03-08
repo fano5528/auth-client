@@ -1,8 +1,23 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import jwt_decode from 'jwt-decode'
 
 export default function Dashboard() {
+
+    useEffect(() => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            const user = jwt_decode(token)
+            if(!user) {
+                localStorage.removeItem('token')
+                window.location.href = '/login'
+            } else {
+                console.log(user)
+            }
+        } else {
+            window.location.href = '/login'
+        }
+    }, [])
 
     return (
         <div className="flex flex-col items-center">
