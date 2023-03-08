@@ -17,7 +17,7 @@ export default function Dashboard() {
         })
         const data = await response.json()
         setFirstName(data.user.firstName)
-        setLastName(data.user.firstName)
+        setLastName(data.user.lastName)
         console.log(data)
     }
 
