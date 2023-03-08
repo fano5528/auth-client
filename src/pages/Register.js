@@ -21,7 +21,8 @@ export default function Register() {
                 })
             })
             .then(data => data.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)})
     }
 
     return (
@@ -32,7 +33,7 @@ export default function Register() {
                 <input className="mt-6 border-[#e0e0e0] border rounded-md" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <input className="mt-6 border-[#e0e0e0] border rounded-md" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                 <input className="mt-6 border-[#e0e0e0] border rounded-md" placeholder="Last Name" value={lastName} onChange={ (e)=> setLastName(e.target.value) }/>
-                <button type="submit" className="mt-12 w-full text-white py-2 bg-[#ff003d] rounded-md mx-auto hover:bg-[#ef002d]">Log In</button>
+                <button type="submit" className="mt-12 w-full text-white py-2 bg-[#ff003d] rounded-md mx-auto hover:bg-[#ef002d]">Register</button>
             </form>
         </div>
     )
