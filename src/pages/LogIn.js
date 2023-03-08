@@ -18,7 +18,13 @@ export default function LogIn() {
             })
             .then(data => data.json())
             .then(data => {
-                console.log(data)})
+                if (data.token) {
+                    alert("You are logged in!")
+                }
+                else {
+                    alert("Incorrect email or password")
+                }
+            })
     }
 
     return (
