@@ -18,6 +18,7 @@ export default function Dashboard() {
         const data = await response.json()
         setFirstName(data.firstName)
         setLastName(data.lastName)
+        console.log(data)
     }
 
     useEffect(() => {
