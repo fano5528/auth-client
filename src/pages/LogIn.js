@@ -28,6 +28,7 @@ export default function LogIn({setToken}) {
     }
 
     return (
+        <>
         <div>
             <h1 className="text-center mt-24 font-bold text-3xl">Log In</h1>
             <form onSubmit={(e)=> trySubmit(e)} className="mt-12 flex w-[50vw] mx-auto border-black shadow-[0_0_15px_5px_rgba(0,0,0,0.05)] p-12 rounded-lg flex-col">
@@ -36,6 +37,7 @@ export default function LogIn({setToken}) {
                 <button type="submit" className="mt-12 w-full text-white py-2 bg-[#ff003d] rounded-md mx-auto hover:bg-[#ef002d]">Log In</button>
             </form>
         </div>
+        </>
       )
 }
 
