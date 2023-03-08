@@ -19,6 +19,7 @@ export default function LogIn() {
             .then(data => data.json())
             .then(data => {
                 if (data.token) {
+                    localStorage.setItem('token', data.token)
                     window.location = '/dashboard'
                 }
             })
