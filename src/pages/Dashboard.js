@@ -4,7 +4,7 @@ import jwt_decode from 'jwt-decode'
 
 export default function Dashboard() {
 
-    useEffect(() => {
+    /*useEffect(() => {
         const token = localStorage.getItem('token')
         if (token) {
             const user = jwt_decode(token)
@@ -17,7 +17,7 @@ export default function Dashboard() {
         } else {
             window.location.href = '/login'
         }
-    }, [])
+    }, [])*/
 
     return (
         <div className="flex flex-col items-center">
