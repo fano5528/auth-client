@@ -21,6 +21,15 @@ export default function Dashboard() {
         console.log(data)
     }
 
+    function logout() {
+        localStorage.removeItem('token')
+        window.location.href = '/login'
+    }
+
+    function upload() {
+        console.log("uploading");
+    }
+
     useEffect(() => {
         const token = localStorage.getItem('token')
         if (token) {
@@ -48,6 +57,11 @@ export default function Dashboard() {
             <li>Last Name: {lastName}</li>
         </ul>
         <Link to="/" className="mt-12 w-[90%] bg-red-500 rounded-md mx-auto text-center">Go to Home</Link>
+        <form action={upload}>
+            <input type="file" name="file" />
+            <input type="submit" value="Upload" />
+        </form>
+        <button onClick={logout} className="mt-12 w-[90%] bg-red-500 rounded-md mx-auto text-center">Log Out</button>
         </div>
     )
 }
