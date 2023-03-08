@@ -24,13 +24,17 @@ export default function Dashboard() {
         const token = localStorage.getItem('token')
         if (token) {
             const user = jwt_decode(token)
+            console.log("si hay token")
             if(!user) {
+                console.log("no hay user")
                 localStorage.removeItem('token')
                 window.location.href = '/login'
             } else {
+                console.log("si hay user")
                 populateDashboard()
             }
         } else {
+            console.log("no hay token")
             window.location.href = '/login'
         }
     }, [])
