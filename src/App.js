@@ -5,8 +5,15 @@ import Dashboard from './pages/Dashboard';
 import LogIn from './pages/LogIn';
 import { Routes, Route } from 'react-router-dom';
 
+function setToken(userToken) {
+  sessionStorage.setItem('token', JSON.stringify(userToken));
+}
+
+function getToken() {
+}
+
 function App() {
-  const [token, setToken] = useState();
+  const token = getToken();
 
   if(!token) {
     return <LogIn setToken={setToken}/>
